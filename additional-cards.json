@@ -1,0 +1,546 @@
+{
+  "schemaVersion": 1,
+  "version": "2026.10.2",
+  "cards": [
+    {
+      "id": "remote-sms-scam-01",
+      "kind": "sms",
+      "sender": "Metro Parcel Alerts",
+      "subject": null,
+      "context": "You have not placed an order or arranged a delivery this week.",
+      "body": "A driver tried to deliver your parcel. Reschedule today at metro-parcel-confirm.example and pay the $2.15 route fee.",
+      "verdict": "scam",
+      "clues": [
+        {
+          "field": "body",
+          "quote": "pay the $2.15 route fee",
+          "explanation": "An unexpected delivery is used to ask for a small payment."
+        }
+      ],
+      "explanation": "The delivery does not match anything you ordered, and the message directs you to an unfamiliar payment site.",
+      "safeAction": "Check orders in the retailer or carrier app you already use instead of following the text link."
+    },
+    {
+      "id": "remote-sms-scam-02",
+      "kind": "sms",
+      "sender": "Wallet Recovery Team",
+      "subject": null,
+      "context": "You do not own cryptocurrency and did not ask anyone to recover an account for you.",
+      "body": "Your dormant wallet has earned $1,840. Reply START now to release the funds before the recovery window closes.",
+      "verdict": "scam",
+      "clues": [
+        {
+          "field": "body",
+          "quote": "Reply START now",
+          "explanation": "The sender tries to begin a conversation around money you did not expect."
+        }
+      ],
+      "explanation": "A surprise balance and a closing deadline are designed to make you respond before checking the claim.",
+      "safeAction": "Do not reply. If you use a financial service, open its official app yourself to review your account."
+    },
+    {
+      "id": "remote-sms-scam-03",
+      "kind": "sms",
+      "sender": "Neighborhood Aid Office",
+      "subject": null,
+      "context": "You have not applied for a grant or requested emergency assistance.",
+      "body": "You qualify for a $900 household grant. Send a photo of your ID and bank card to complete the same-day deposit.",
+      "verdict": "scam",
+      "clues": [
+        {
+          "field": "body",
+          "quote": "photo of your ID and bank card",
+          "explanation": "The message requests highly sensitive documents and payment information together."
+        }
+      ],
+      "explanation": "A grant you never sought is being used as a reason to collect identity and card details.",
+      "safeAction": "Do not send documents or card images. Verify any benefit through an independently found official contact."
+    },
+    {
+      "id": "remote-sms-scam-04",
+      "kind": "sms",
+      "sender": "PhotoShare Help",
+      "subject": null,
+      "context": "You did not request a password reset and no support conversation is open.",
+      "body": "We stopped a password change. Text back the code we sent so our agent can lock the account for you.",
+      "verdict": "scam",
+      "clues": [
+        {
+          "field": "body",
+          "quote": "Text back the code",
+          "explanation": "A legitimate verification code should stay private, even from someone claiming to be support."
+        }
+      ],
+      "explanation": "The sender is trying to obtain an authentication code that could be used to take over your account.",
+      "safeAction": "Keep the code private and check account security only through the app or website you open yourself."
+    },
+    {
+      "id": "remote-sms-legit-01",
+      "kind": "sms",
+      "sender": "Oak Dental",
+      "subject": null,
+      "context": "Yesterday you booked a cleaning with Oak Dental for Tuesday at 10:30 am.",
+      "body": "Reminder: your cleaning is Tuesday at 10:30 am. Reply C to confirm or call the clinic number already saved in your contacts to reschedule.",
+      "verdict": "legit",
+      "clues": [
+        {
+          "field": "body",
+          "quote": "Tuesday at 10:30 am",
+          "explanation": "The time matches the appointment you personally booked."
+        }
+      ],
+      "explanation": "This is a routine reminder for a known appointment and does not ask for money, credentials, or sensitive information.",
+      "safeAction": "Confirm if the details match your appointment, or call the clinic using its known number."
+    },
+    {
+      "id": "remote-sms-legit-02",
+      "kind": "sms",
+      "sender": "Riverside Library",
+      "subject": null,
+      "context": "You put the novel 'The Glass Harbor' on hold through the library catalogue.",
+      "body": "Your hold, The Glass Harbor, is ready at Riverside Library until 18 October. Bring your library card to collect it.",
+      "verdict": "legit",
+      "clues": [
+        {
+          "field": "body",
+          "quote": "The Glass Harbor",
+          "explanation": "The message identifies the exact title you placed on hold."
+        }
+      ],
+      "explanation": "The pickup notice matches a hold you made and only gives collection details.",
+      "safeAction": "Check the hold in your library account if you want an independent confirmation."
+    },
+    {
+      "id": "remote-sms-legit-03",
+      "kind": "sms",
+      "sender": "Harbor Gym",
+      "subject": null,
+      "context": "You cancelled your Harbor Gym class in its app a few minutes ago.",
+      "body": "Your 6:00 pm Pilates booking has been cancelled. No charge was made. Your booking reference is HG-4418.",
+      "verdict": "legit",
+      "clues": [
+        {
+          "field": "body",
+          "quote": "has been cancelled",
+          "explanation": "The update matches the cancellation you just completed."
+        }
+      ],
+      "explanation": "This is a confirmation of a change you initiated and it does not direct you to a payment or sign-in page.",
+      "safeAction": "Keep the reference if needed and review the booking in the gym app."
+    },
+    {
+      "id": "remote-sms-legit-04",
+      "kind": "sms",
+      "sender": "Maple Theatre",
+      "subject": null,
+      "context": "You bought two tickets for Maple Theatre's Friday matinee from its box office website.",
+      "body": "Your Friday matinee starts at 2:00 pm. Doors open at 1:30 pm. Your ticket QR codes remain in your Maple Theatre account.",
+      "verdict": "legit",
+      "clues": [
+        {
+          "field": "body",
+          "quote": "Friday matinee",
+          "explanation": "The message corresponds to the show you already purchased."
+        }
+      ],
+      "explanation": "The text provides practical event information for a known purchase and asks for nothing in return.",
+      "safeAction": "Open the box office account you already use if you need to view the tickets."
+    },
+    {
+      "id": "remote-email-scam-01",
+      "kind": "email",
+      "sender": "Billing Department <notice@studio-invoices.example>",
+      "subject": "Final notice: design subscription overdue",
+      "context": "You do not have a design subscription and have not received an invoice from this company.",
+      "body": "Our records show an unpaid annual renewal of $289. Avoid collection action by paying today at studio-billing-center.example.",
+      "verdict": "scam",
+      "clues": [
+        {
+          "field": "body",
+          "quote": "Avoid collection action",
+          "explanation": "A threat is used to pressure payment for a service you do not use."
+        }
+      ],
+      "explanation": "An unexpected invoice combined with a threat and a payment link is a phishing pattern.",
+      "safeAction": "Do not use the link. Check any real subscriptions through the official service you already know."
+    },
+    {
+      "id": "remote-email-scam-02",
+      "kind": "email",
+      "sender": "Talent Desk <hiring@remote-placement.example>",
+      "subject": "Interview shortcut approved",
+      "context": "You have not applied for a job with this company and did not contact a recruiter.",
+      "body": "You were selected without an interview. Complete the payroll form today by entering your personal email password to verify identity.",
+      "verdict": "scam",
+      "clues": [
+        {
+          "field": "body",
+          "quote": "personal email password",
+          "explanation": "An employer has no reason to request the password for your private email account."
+        }
+      ],
+      "explanation": "The unsolicited job offer uses an impossible payroll requirement to steal account credentials.",
+      "safeAction": "Do not share a password. Research employers independently before engaging with a job offer."
+    },
+    {
+      "id": "remote-email-scam-03",
+      "kind": "email",
+      "sender": "Office of the Director <director.requests@company-mail.example>",
+      "subject": "Confidential task before the meeting",
+      "context": "Your director normally uses the internal work chat for requests, and there is no meeting scheduled today.",
+      "body": "I need 12 digital gift cards for guests. Buy them now, email the codes back, and keep this between us until the meeting.",
+      "verdict": "scam",
+      "clues": [
+        {
+          "field": "body",
+          "quote": "email the codes back",
+          "explanation": "Gift card codes can be spent immediately and are difficult to recover."
+        }
+      ],
+      "explanation": "The sender impersonates a manager, creates secrecy and urgency, and asks for gift card codes.",
+      "safeAction": "Verify the request with your director through the established internal channel before buying anything."
+    },
+    {
+      "id": "remote-email-scam-04",
+      "kind": "email",
+      "sender": "Cloud Vault <alerts@cloud-vault-security.example>",
+      "subject": "Files scheduled for deletion in 2 hours",
+      "context": "Your Cloud Vault app shows that you have ample storage and no deletion notice.",
+      "body": "Your storage limit was exceeded. Restore access in 2 hours by signing in at cloud-vault-restore.example.",
+      "verdict": "scam",
+      "clues": [
+        {
+          "field": "body",
+          "quote": "in 2 hours",
+          "explanation": "A very short deadline is meant to prevent careful verification."
+        }
+      ],
+      "explanation": "The warning contradicts the account information you can see in the real app and pushes an unfamiliar sign-in link.",
+      "safeAction": "Open the storage app yourself and check account notices there."
+    },
+    {
+      "id": "remote-email-legit-01",
+      "kind": "email",
+      "sender": "Maple Theatre Box Office <tickets@maple-theatre.example>",
+      "subject": "Your Friday matinee ticket receipt",
+      "context": "You just bought two Friday matinee tickets through Maple Theatre's official box office page.",
+      "body": "Thank you for your purchase. Order MT-80317 confirms two Friday matinee tickets. Total paid: $36.00. No action is required.",
+      "verdict": "legit",
+      "clues": [
+        {
+          "field": "body",
+          "quote": "Order MT-80317",
+          "explanation": "The receipt includes the order reference shown after your own purchase."
+        }
+      ],
+      "explanation": "This is a receipt for a transaction you just completed, and it does not request credentials or an additional payment.",
+      "safeAction": "Keep the receipt and view the order through the box office account if necessary."
+    },
+    {
+      "id": "remote-email-legit-02",
+      "kind": "email",
+      "sender": "Pine Coast University <orientation@pinecoast.example>",
+      "subject": "Orientation room confirmed: Library 204",
+      "context": "You enrolled for Pine Coast University's new-student orientation and selected the afternoon session.",
+      "body": "Your afternoon orientation session is confirmed for Library 204 on 21 October. Bring photo ID for check-in; no online form is needed.",
+      "verdict": "legit",
+      "clues": [
+        {
+          "field": "body",
+          "quote": "Library 204",
+          "explanation": "The room detail corresponds to the session you registered for."
+        }
+      ],
+      "explanation": "The email confirms a known registration and provides attendance details without asking you to click, pay, or sign in.",
+      "safeAction": "Compare the details with your enrollment calendar if you would like to verify them."
+    },
+    {
+      "id": "remote-email-legit-03",
+      "kind": "email",
+      "sender": "Fresh Basket <orders@fresh-basket.example>",
+      "subject": "One item changed in order FB-10592",
+      "context": "You placed grocery order FB-10592 this morning and selected 'allow substitutions' at checkout.",
+      "body": "For order FB-10592, Green Valley oats are unavailable. We will substitute Harbor Mill oats at the same price unless you update the order in the app by 4:00 pm.",
+      "verdict": "legit",
+      "clues": [
+        {
+          "field": "body",
+          "quote": "order FB-10592",
+          "explanation": "The order number is the one from your recent grocery checkout."
+        }
+      ],
+      "explanation": "The message matches an active order and the substitution preference you selected; it does not request payment information.",
+      "safeAction": "Use the grocery app you already have open if you want to change the substitution."
+    },
+    {
+      "id": "remote-email-legit-04",
+      "kind": "email",
+      "sender": "Cedar Appliance Service <appointments@cedar-service.example>",
+      "subject": "Service visit tomorrow, 9:00–11:00 am",
+      "context": "You scheduled a washing-machine repair with Cedar Appliance Service and received this time window at booking.",
+      "body": "Your repair visit is booked for tomorrow between 9:00 and 11:00 am. The technician will show work order CS-7784 on arrival. No payment is due at the door.",
+      "verdict": "legit",
+      "clues": [
+        {
+          "field": "body",
+          "quote": "CS-7784",
+          "explanation": "The work-order number matches the repair booking you made."
+        }
+      ],
+      "explanation": "This is a routine reminder for a service appointment you arranged and it makes no request for a link or sensitive data.",
+      "safeAction": "Keep the work-order number and call the service company through its known contact if the time changes."
+    },
+    {
+      "id": "remote-call-scam-01",
+      "kind": "call",
+      "sender": "Unknown caller",
+      "subject": null,
+      "context": "You did not request computer support and your computer is working normally.",
+      "body": "Caller: 'We are from Device Shield. Your laptop is sending virus reports. Install our remote tool now so I can remove the infection before your files are locked.'",
+      "verdict": "scam",
+      "clues": [
+        {
+          "field": "body",
+          "quote": "Install our remote tool now",
+          "explanation": "An unsolicited caller wants remote access to your device."
+        }
+      ],
+      "explanation": "Real support providers do not normally call out of the blue and pressure you to install remote-control software.",
+      "safeAction": "Hang up. If you are concerned, contact your device provider through its official support channel."
+    },
+    {
+      "id": "remote-call-scam-02",
+      "kind": "call",
+      "sender": "Unknown caller",
+      "subject": null,
+      "context": "You have no unpaid government fee and did not receive an official letter about one.",
+      "body": "Caller: 'This is the National Revenue Desk. An enforcement officer will visit today unless you pay $480 using a crypto kiosk while I stay on the line.'",
+      "verdict": "scam",
+      "clues": [
+        {
+          "field": "body",
+          "quote": "using a crypto kiosk",
+          "explanation": "Government agencies do not demand payment through cryptocurrency machines."
+        }
+      ],
+      "explanation": "The caller combines a threat of enforcement with an unusual, hard-to-reverse payment method.",
+      "safeAction": "Hang up and independently find the official agency contact before discussing any alleged debt."
+    },
+    {
+      "id": "remote-call-scam-03",
+      "kind": "call",
+      "sender": "Unknown caller",
+      "subject": null,
+      "context": "Your sister is at home and has not contacted you about an emergency.",
+      "body": "Caller: 'Your sister caused an accident and cannot talk. Send $1,200 by instant transfer in the next ten minutes or she will be arrested.'",
+      "verdict": "scam",
+      "clues": [
+        {
+          "field": "body",
+          "quote": "in the next ten minutes",
+          "explanation": "The caller uses urgency to stop you from checking on your sister independently."
+        }
+      ],
+      "explanation": "A fabricated family emergency and a demand for an immediate transfer are common impersonation tactics.",
+      "safeAction": "End the call and contact your sister or another family member through a known number."
+    },
+    {
+      "id": "remote-call-scam-04",
+      "kind": "call",
+      "sender": "Unknown caller",
+      "subject": null,
+      "context": "You have not made a transfer or started a bank login, and no bank appointment is scheduled.",
+      "body": "Caller: 'I am from Northbank fraud prevention. Read the six-digit code that just arrived so I can cancel the transfer for you.'",
+      "verdict": "scam",
+      "clues": [
+        {
+          "field": "body",
+          "quote": "Read the six-digit code",
+          "explanation": "The caller is asking for a security code that could authorize their own action."
+        }
+      ],
+      "explanation": "A caller cannot safely verify a transaction by asking you to reveal an authentication code.",
+      "safeAction": "Do not share the code. Hang up and call the number printed on your bank card."
+    },
+    {
+      "id": "remote-call-legit-01",
+      "kind": "call",
+      "sender": "Meadow Pharmacy",
+      "subject": null,
+      "context": "The Meadow Pharmacy app notified you earlier that your refill was being prepared.",
+      "body": "Caller: 'Your prescription refill is ready for collection until Friday. We are not taking payment by phone; please bring your usual ID when you visit.'",
+      "verdict": "legit",
+      "clues": [
+        {
+          "field": "body",
+          "quote": "not taking payment by phone",
+          "explanation": "The caller gives collection information and explicitly does not seek payment details."
+        }
+      ],
+      "explanation": "The call follows a status update from the pharmacy you use and provides a routine pickup reminder.",
+      "safeAction": "Collect the refill or call the pharmacy using its verified number if you have a question."
+    },
+    {
+      "id": "remote-call-legit-02",
+      "kind": "call",
+      "sender": "Cedar Appliance Service",
+      "subject": null,
+      "context": "You are expecting a washing-machine technician today between 9:00 and 11:00 am under work order CS-7784.",
+      "body": "Caller: 'This is Cedar Appliance Service. Our technician for work order CS-7784 is delayed by twenty minutes and will arrive around 10:15 am.'",
+      "verdict": "legit",
+      "clues": [
+        {
+          "field": "body",
+          "quote": "work order CS-7784",
+          "explanation": "The caller has the booking reference for your expected repair visit."
+        }
+      ],
+      "explanation": "The update concerns a real appointment you scheduled and only changes the expected arrival time.",
+      "safeAction": "Wait for the technician or call the service company through its established number if needed."
+    },
+    {
+      "id": "remote-call-legit-03",
+      "kind": "call",
+      "sender": "Pine Coast Clinic",
+      "subject": null,
+      "context": "Your calendar contains a Pine Coast Clinic check-up tomorrow afternoon.",
+      "body": "Caller: 'This is a reminder that your check-up is tomorrow at 3:40 pm. Please arrive ten minutes early. We do not need any information from you on this call.'",
+      "verdict": "legit",
+      "clues": [
+        {
+          "field": "body",
+          "quote": "tomorrow at 3:40 pm",
+          "explanation": "The time matches the appointment recorded in your calendar."
+        }
+      ],
+      "explanation": "This is a basic reminder for an appointment you know about, with no request for data or payment.",
+      "safeAction": "Attend as planned or call the clinic through its known number if you need to reschedule."
+    },
+    {
+      "id": "remote-popup-scam-01",
+      "kind": "popup",
+      "sender": "Browser warning",
+      "subject": "Critical virus scan completed",
+      "context": "The alert appeared while you were reading an ordinary news article, and you had not started a security scan.",
+      "body": "18 threats found! Call 0800-555-0199 immediately or install ShieldFix from browser-security-help.example to prevent permanent damage.",
+      "verdict": "scam",
+      "clues": [
+        {
+          "field": "body",
+          "quote": "Call 0800-555-0199 immediately",
+          "explanation": "A web page is trying to move you to an unsolicited support call."
+        }
+      ],
+      "explanation": "A browser page cannot credibly run an emergency device scan, and the alert pushes a phone number and unfamiliar download.",
+      "safeAction": "Close the tab without calling or installing anything. Run a scan only with security software you already trust."
+    },
+    {
+      "id": "remote-popup-scam-02",
+      "kind": "popup",
+      "sender": "System Upgrade Center",
+      "subject": "Device configuration update required",
+      "context": "You did not open system settings or request an update; the pop-up appeared inside a free wallpaper app.",
+      "body": "Install the Secure Device Profile from device-config-update.example within five minutes to keep using your phone.",
+      "verdict": "scam",
+      "clues": [
+        {
+          "field": "body",
+          "quote": "Install the Secure Device Profile",
+          "explanation": "An unrelated app is pressuring you to install a device-management profile."
+        }
+      ],
+      "explanation": "The alert appears in the wrong place and asks you to install a profile through an unfamiliar site.",
+      "safeAction": "Dismiss the pop-up and check operating-system updates only in your device settings."
+    },
+    {
+      "id": "remote-popup-scam-03",
+      "kind": "popup",
+      "sender": "Prize Spinner",
+      "subject": "You are today's selected winner!",
+      "context": "You did not enter a contest; this appeared after tapping an advertisement in a game.",
+      "body": "Claim your tablet in the next 90 seconds. Pay a $3.99 verification charge at prize-shipping-center.example.",
+      "verdict": "scam",
+      "clues": [
+        {
+          "field": "body",
+          "quote": "$3.99 verification charge",
+          "explanation": "The supposed prize requires an unexpected payment."
+        }
+      ],
+      "explanation": "A surprise prize, short countdown, and payment demand are warning signs of a prize scam.",
+      "safeAction": "Close the advertisement and do not submit payment details."
+    },
+    {
+      "id": "remote-popup-legit-01",
+      "kind": "popup",
+      "sender": "App Store",
+      "subject": "Update ready for Harbor Notes",
+      "context": "You opened the official App Store, selected Harbor Notes from your Purchased list, and tapped its Update button.",
+      "body": "Harbor Notes version 4.2 is ready to install. Tap Update to download the version you selected.",
+      "verdict": "legit",
+      "clues": [
+        {
+          "field": "body",
+          "quote": "the version you selected",
+          "explanation": "The prompt follows an update action you initiated in the official store."
+        }
+      ],
+      "explanation": "This is the expected confirmation after you asked the official app store to update a known app.",
+      "safeAction": "Install it if it is the app and update you intended to select."
+    },
+    {
+      "id": "remote-popup-legit-02",
+      "kind": "popup",
+      "sender": "Harbor Cafe Wi-Fi",
+      "subject": "Guest network terms",
+      "context": "You joined the clearly labelled Harbor Cafe guest Wi-Fi network after asking staff for its name.",
+      "body": "Welcome to Harbor Cafe guest Wi-Fi. Read the terms and tap Accept to connect. No password, payment, or account sign-in is requested.",
+      "verdict": "legit",
+      "clues": [
+        {
+          "field": "body",
+          "quote": "No password, payment, or account sign-in is requested",
+          "explanation": "The captive portal only asks you to accept network terms."
+        }
+      ],
+      "explanation": "The page follows joining a network that staff confirmed and does not ask for credentials or money.",
+      "safeAction": "Accept the terms if the network name still matches the one staff provided."
+    },
+    {
+      "id": "remote-popup-legit-03",
+      "kind": "popup",
+      "sender": "Canvas Draft",
+      "subject": "Save changes before closing?",
+      "context": "You have been editing an unsaved poster in the Canvas Draft app and just tapped Close.",
+      "body": "You have unsaved changes to Autumn Festival Poster. Choose Save Draft, Discard Changes, or Cancel.",
+      "verdict": "legit",
+      "clues": [
+        {
+          "field": "body",
+          "quote": "Autumn Festival Poster",
+          "explanation": "The dialog names the document you were actively editing."
+        }
+      ],
+      "explanation": "The save dialog is an expected local warning after you try to close an edited document.",
+      "safeAction": "Choose the option that matches whether you want to keep the changes."
+    },
+    {
+      "id": "remote-popup-legit-04",
+      "kind": "popup",
+      "sender": "Calendar",
+      "subject": "Reminder: team brunch in 15 minutes",
+      "context": "You created a 'team brunch' calendar event for today and set a 15-minute notification.",
+      "body": "Team brunch starts at 12:30 pm at Juniper Room. Snooze or view the event details.",
+      "verdict": "legit",
+      "clues": [
+        {
+          "field": "body",
+          "quote": "Team brunch",
+          "explanation": "The reminder names the event you added to your own calendar."
+        }
+      ],
+      "explanation": "This is a locally scheduled reminder for a known event and offers only normal reminder controls.",
+      "safeAction": "Snooze it or open the calendar event if you need directions."
+    }
+  ]
+}
